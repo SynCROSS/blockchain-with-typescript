@@ -4,5 +4,9 @@
   "description": "Learning TypeScript",
   "main": "index.js",
   "author": "SynCROSS",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "prestart": "tsc"
+  }
 }
