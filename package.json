@@ -1,0 +1,8 @@
+{
+  "name": "learning-ts",
+  "version": "0.0.1",
+  "description": "Learning TypeScript",
+  "main": "index.js",
+  "author": "SynCROSS",
+  "license": "MIT"
+}
