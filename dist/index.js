@@ -42,6 +42,7 @@ const createNewBlock = (data) => {
     const newTimestamp = getNewTimestamp();
     const newHash = Block.calcBlockHash(newIndex, prevBlock.getHash(), newTimestamp, data);
     const newBlock = new Block(newIndex, newHash, prevBlock.getHash(), data, newTimestamp);
+    addBlock(newBlock);
     return newBlock;
 };
 const getHashforBlock = (block) => Block.calcBlockHash(block.getIndex(), block.getPrevHash(), block.getTimestamp(), block.getData());
@@ -67,5 +68,8 @@ const addBlock = (candidateBlock) => {
         blockChain.push(candidateBlock);
     }
 };
-console.log(createNewBlock('data1'), createNewBlock('data2'));
+createNewBlock('data1');
+createNewBlock('data2');
+createNewBlock('data3');
+console.log(blockChain);
 //# sourceMappingURL=index.js.map

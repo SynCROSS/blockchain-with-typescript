@@ -78,7 +78,7 @@ const createNewBlock = (data: string): Block => {
     data,
     newTimestamp,
   );
-
+  addBlock(newBlock);
   return newBlock;
 };
 
@@ -109,6 +109,9 @@ const addBlock = (candidateBlock: Block): void => {
     blockChain.push(candidateBlock);
   }
 };
-console.log(createNewBlock('data1'), createNewBlock('data2'));
+createNewBlock('data1');
+createNewBlock('data2');
+createNewBlock('data3');
+console.log(blockChain);
 
 export {}; // * export on TS
